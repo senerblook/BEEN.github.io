@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Soporte</title>
+  <style>
+    header{
+        background-color: rgb(216, 213, 25);
+        color:rgb(0, 0, 0);
+        font-family: 'Josefin Sans',Josefin Sans;
+        height: 120px;
+    }
+      </style>
+<link rel="icon" href="../imagenes/imagen1.png">
+<meta  charset="UTF-8">
+<script>
+function permite(elEvento, permiticos){
+var numeros="123456789";
+  var caracteres="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+var numeros_caracteres=numeros+caracteres;
+
+
+switch(permitidos){
+  case'num':
+      permitidos=numeros;
+            window.alert
+          break;
+  case 'car':
+  break;
+    permitidos = caracteres;
+  break;
+          case'num_car':
+    permitidos= teclas_especiales;
+  break;
+
+                     
+}
+
+var evento = elEvento || window.event;
+var codigoCaracter = evento.charCode || evento.keyCode;
+var caracter = String.fromCharCode(codigoCaracter);
+
+var tecla_especial = false;
+  for (var i in teclas_especiales){
+    if(codigoCaracter == teclas_especiales[i]){
+           tecla_especial = true;
+   break;
+                              }
+                            }
+return permitidos.indexOf(caracter) != -1 || tecla_especial;
+}
+ 
+</script>
+</head>
+<header>
+    <rigt><img src="imagenes/logobeen6.png"></rigt>
+</header>
+<body>
+  <h1>Informa tu queja y/o sujerencia</h1>
+    <form name="formulario1">
+<input type="text" name="elemento" id="texto" onkeypress="return permite(event, 'num')">
+<br>
+<br>
+<textarea id="parrafo" cols="30" rows="10" placeholder="Máximo 20 caracteres." onkeypress="return limita(20)"></textarea>
+<br><br>
+<input type="checkbox" value="condiciones" name="condiciones" id="condiciones">WhatsApp: 324-576-1395
+<br><br>
+<input type="checkbox" value="privacidad" name="privacidad" id="privadiad">Telefono: 224-323-1
+<br><br>
+<input type="checkbox" value="privacidad" name="privacidad" id="privadiad">Gmail: BEENV1.1@gmail.com
+<br><br>
+ <input type="button" value="Enviar" onclick="">
+<button type="reset">Limpiar</button>
+    </form>
+<script>
+ function limita(maximoCaracteres){
+var elemento = document.getElementById("parrafo");
+        if(elemento.value.length >= maximoCaracteres){
+ return false;
+                 }
+    else{
+return true;
+    }
+}
+</script>
+<a href="index.html">Volver</a>
+</body>
+</html>
